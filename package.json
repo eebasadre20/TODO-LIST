@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "postinstall": "cd client && yarn install"
+  },
+
   "name": "react-redux-todo-list",
   "private": true,
   "dependencies": {}
