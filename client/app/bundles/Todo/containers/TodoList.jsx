@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import TodoList from '../components/TodoList';
+import { toggleTodo } from '../actions/todoActionCreators';
 
 const mapStateToProps = ( state ) => {
     return{ 
@@ -7,4 +8,12 @@ const mapStateToProps = ( state ) => {
     }
 }
 
-export default connect( mapStateToProps, null)(TodoList);
+const mapDispatchToProps = ( dispatch ) => {
+    return {
+        onTodoClick: ( id ) => {
+            dispatch( toggleTodo( id ));
+        }
+    }
+}
+
+export default connect( mapStateToProps, mapDispatchToProps)(TodoList);

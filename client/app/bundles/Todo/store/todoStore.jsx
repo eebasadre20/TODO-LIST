@@ -11,7 +11,7 @@ export default function configureStore (railsProps) {
         applyMiddleware(...middleware)
     )(createStore)(todoReducer, railsProps);
     
-    sagaMiddleware.run(rootSaga);
+    // sagaMiddleware.run(rootSaga);
 
     return store;
 };

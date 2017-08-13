@@ -1,13 +1,15 @@
-import React from 'react'
-// import Footer from './Footer'
-import AddTodo from '../containers/AddTodo'
-import VisibleTodoList from '../containers/TodoList'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const App = () => (
-  <div>
-    <AddTodo />
-    <VisibleTodoList /> 
-  </div>
+const Todo = ( { onClick, completed, text }) => (
+    <li
+        onClick={onClick} 
+        style={{
+            textDecoration: completed ? 'line-through' : 'none'
+        }}
+    >
+        {text}
+    </li>
 )
 
-export default App
+export default Todo;

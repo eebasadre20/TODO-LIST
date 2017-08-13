@@ -2,7 +2,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 
 import configureStore from '../store/todoStore';
-import Todo from '../components/Todo';
+import App from '../components/App';
 // import TodoContainer from '../containers/TodoContainer';
 
 // See documentation for https://github.com/reactjs/react-redux.
@@ -12,7 +12,7 @@ import Todo from '../components/Todo';
 // knowing the locale. See the React on Rails documentation for more info on the railsContext
 const TodoApp = (props, _railsContext) => (
   <Provider store={configureStore(props)}>
-      <Todo />
+      <App />
   </Provider>
 );
 
